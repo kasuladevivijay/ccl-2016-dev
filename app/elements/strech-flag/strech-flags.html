@@ -1,0 +1,36 @@
+<dom-module id="strech-flags">
+
+	<link rel="import" href="strech-flag.html">
+	<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+	<template>
+
+	<h3>Countries</h3>
+		<!--<iron-ajax auto url="
+		../../bower_components/country-flags/countries.json" handle-as="json" last-response="{{ countries }}"></iron-ajax>-->
+
+		<iron-ajax auto url="
+		../../model/countries.php" handle-as="json" last-response="{{ countries }}"></iron-ajax>
+
+
+		<template is="dom-repeat" items="{{ countries }}" as="country">
+			<strech-flag
+				country_id="{{ country.id }}"
+				country_flag="{{ country.flag }}"
+				country_name="{{ country.name }}"
+			></strech-flag>
+	
+		</template>
+
+		
+	</template>
+
+</dom-module>
+
+<script>
+	
+	Polymer({
+		is: "strech-flags"
+	});
+
+</script>

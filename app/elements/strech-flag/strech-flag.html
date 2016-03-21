@@ -1,0 +1,53 @@
+<dom-module id="strech-flag">
+
+	<style>
+
+		#flag {
+			display: block;
+		}
+
+		#container {
+			background: #eee;
+			padding: 16px;
+		}
+
+		:host{
+
+			display: inline-block;
+		}
+
+	</style>
+	
+	<template>
+
+		<div id="container">
+			<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+			<paper-toolbar><div>{{ country_id }}</div></paper-toolbar>
+			<img id="flag" src="{{ country_flag }}">
+			<p>{{ country_name }}</p>
+		</div>
+	</template>
+
+</dom-module>
+
+<script>
+	
+	Polymer({
+		is: "strech-flag",
+		properties: {
+			country_id:{
+				type: String,
+				value: "IN"
+			},
+			country_flag: {
+				type: String,
+				value: "../../bower_components/country-flags/png250px/in.png"
+			},
+			country_name: {
+				type: String,
+				value: "India"
+			}
+		}
+	});
+
+</script>

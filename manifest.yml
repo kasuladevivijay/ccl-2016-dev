@@ -1,0 +1,7 @@
+---
+#Generated manifest
+applications:
+- name: my-polymer-starter-kit
+  memory: 1G
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git

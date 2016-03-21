@@ -1,0 +1,41 @@
+<dom-module id="ccl-teams">
+
+	<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+	<template>
+		
+		<div id="teams-container">
+			<table border="1">
+
+			<tr>
+				<th>Team</th>
+				<th>Group</th>
+				<th>Logo</th>
+				<th>Points</th>
+			</tr>
+
+			<iron-ajax auto url="../../model/teams.php" handle-as="json" last-response="{{ teams }}"></iron-ajax>
+
+
+			<template is="dom-repeat" items="{{ teams }}" as="team">
+
+				<tr>
+					<td>{{ team.name }} </td>
+					<td>{{ team.gp }} </td>
+					<td><img src="{{ team.logo }} "></td>
+					<td>{{ team.points }} </td>
+				</tr>
+			</template>
+			</table>
+		</div>
+
+	</template>
+</dom-module>
+
+<script>
+Polymer({
+	is: "ccl-teams"
+
+});
+
+</script>
