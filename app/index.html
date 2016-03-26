@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <title>CCl-2016</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -186,21 +186,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     }
                 </style>
 
-                <paper-tabs selected="0">
-                  <paper-tab link><a >Today's Matches</a></paper-tab>
-                  <paper-tab link><a >Day's Summary</a></paper-tab>
-                  <paper-tab link><a >CCL Updates</a></paper-tab>
+
+                <paper-tabs selected="{{selected}}">
+                  <paper-tab>Today's Matches</paper-tab>
+                  <paper-tab>Day's Summary</paper-tab>
+                  <paper-tab>Standings</paper-tab>
+                  <paper-tab>CCL Updates</paper-tab>
                 </paper-tabs>
+
+                <iron-pages selected="{{selected}}">
+                  <div><ccl-teams></ccl-teams></div>
+                  <div>Page 2</div>
+                  <div>Standings</div>
+                  <div><ccl-teams></ccl-teams></div>
+                </iron-pages>
 
             </section>
 
             <section data-route="teams" tabindex="-1">
               <paper-material elevation="1">
-                <h1 class="page-title" tabindex="-1">Teams</h1>
+               <!--<h1 class="page-title" tabindex="-1">Teams</h1>-->
                 
-                <ccl-teams></ccl-teams>
+                <ccl-teams group="A"></ccl-teams>
+                <ccl-teams group="B"></ccl-teams>
+                <ccl-teams group="C"></ccl-teams>
+                <ccl-teams group="D"></ccl-teams>
+                <ccl-teams group="E"></ccl-teams>
               </paper-material>
             </section>
+
+            <section data-route="team" tabindex="-1">
+              <paper-material elevation="1">
+
+            
+
+              </paper-material>
+            </section>
+
+            <section data-route="fixtures" tabindex="-1">
+              <paper-material elevation="1">
+
+                <ccl-fixtures></ccl-fixtures>
+
+              </paper-material>
+            </section>
+
+
+            <section data-route="teamCMAT" tabindex="-1">
+              <paper-material elevation="1">
+                  <team-cmat></team-cmat>
+              </paper-material>
+            </section>
+        
+
+
+
+            <section data-route="team-info" tabindex="-1">
+              <paper-material elevation="-1">
+                <h1 class="page-title" tabindex="-1">User: {{params.team-id}}</h1>
+                <div>This is {{params.team-id}}'s section</div>
+              </paper-material>
+            </section>
+
 
             <section data-route="users" tabindex="-1">
               <paper-material elevation="1">

@@ -1,0 +1,98 @@
+<dom-module id="ccl-fixtures">
+
+	<link rel="stylesheet" href="../../styles/style.css">
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+		
+	<template>
+
+	<iron-ajax auto url="../../model/fixtures.php" handle-as="json" last-response="{{ matches }}"></iron-ajax>
+
+  <!--
+	<div id="cmat" role="main">
+    <div class="row">
+    	
+    	
+        <ul class="team-landing-list small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+        	<template is="dom-repeat" items="{{ teamMembers }}" as="teamMember">
+                <li>
+                	
+                      <span class="ts-circle ts-white-border ">
+                            <img width="160" alt="Profile Picture" srcset="{{teamMember.photo}}">
+                      </span>
+                      <div class="tshowcase-box-details">
+                              <div class="tshowcase-single-position">{{teamMember.name}}</div>
+                              <div class="tshowcase-single-email"><a href="mailto:{{teamMember.email}}">
+                              {{teamMember.email}}</a></div>
+                      </div>
+                    
+                  </li>
+            </template>
+              
+        </ul>
+        
+    </div>
+	</div>
+
+-->
+
+  <div class="row">
+  <div class="column large-12">
+    <section class="matchesList">
+      <ul class="scheduledMatches">   
+
+      
+      <template is="dom-repeat" items="{{ matches }}" as="match">
+       <li data-match-id="{{match.mno}}">        
+       <div class="matchBox animated fadeInUp" style="animation-delay: 0s;">            
+        <header class="matchHeader">                
+          <div class="match">Match {{match.mno}}</div>                
+            <div class="time">{{match.m_date}}</div>                
+            
+        </header>            
+        <div class="matchContent">                
+        <div class="teamBadges">                    
+          <a class="tLogo100x" href="/teams/{{match.team1id}}"><img src="{{match.team1logo}}"></a>                    
+          <a class="tLogo70x" href="/teams/{{match.team1id}}"><img src="{{match.team1logo}}"></a>                    
+          <a class="tLogo50x" href="/teams/{{match.team1id}}"><img src="{{match.team1logo}}"></a>                    
+          <div class="vs">vs</div>                    
+          <a class="tLogo100x" href="/teams/{{match.team2id}}"><img src="{{match.team2logo}}"></a>                    
+          <a class="tLogo70x" href="/teams/{{match.team1id}}"><img src="{{match.team2logo}}"></a>                    
+          <a class="tLogo50x" href="/teams/{{match.team1id}}"><img src="{{match.team2logo}}"></a>                
+        </div>                
+        <div class="matchInfo">                    
+          <div class="summary">{{match.team1name}} VS {{match.team2name}}</div>                    
+          <div class="summary short">{{match.team1symbol}} vs {{match.team2symbol}}</div>              
+        </div>                
+        <!--
+        <div class="actions">
+          <a class="highlightBtn matchCentre" href="/match/2016/2">Match Centre</a>
+        </div>                
+          <a class="moreBtn arrows-animate" href="#" data-match-id="ipl2016-02" data-teamaway-id="3" data-teamhome-id="5"></a>
+        </div>
+
+        <div class="headTohead moreContaineripl2016-02 eden gardens" style="display:none;" data-match-id="ipl2016-02" data-match-date="2016-04-10T20:00:00+0530" data-open="-1"></div>      -->
+        </div> 
+        </div>
+        </li>
+        </template>
+       
+      </ul>
+      <div class="noFixtures" style="display: none;">
+        <p>No fixtures to display</p>
+      </div>
+    </section>
+  </div>
+</div>
+	</template>
+
+</dom-module>
+
+<script>
+Polymer({
+	is: "ccl-fixtures"
+	
+});
+
+</script>

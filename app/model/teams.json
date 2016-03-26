@@ -1,0 +1,22 @@
+[
+	{"group":"A","logo":"images\/teams\/Aces.jpg","name":"Aces","points":"0","symbol":""}
+	,{"group":"A", "logo":"images\/teams\/Box_Busters.jpg","name":"Box Busters","points":"0","symbol":""}
+	,{"group":"A", "logo":"images\/teams\/Cunning_Rascals.jpg","name":"Cunning Rascals","points":"0","symbol":""}
+	,{"group":"A", "logo":"images\/teams\/Swarajya.png","name":"Swarajya","points":"0","symbol":""}
+	,{"group":"B", "logo":"images\/teams\/Dabangg.jpg","name":"Dabangg","points":"0","symbol":""}
+	,{"group":"B", "logo":"images\/teams\/dementor.jpg","name":"Dementor","points":"0","symbol":""}
+	,{"group":"B", "logo":"images\/teams\/Avengers.png","name":"Avengers","points":"0","symbol":""}
+	,{"group":"B", "logo":"images\/teams\/gunners.jpg","name":"Gunners","points":"0","symbol":""}
+	,{"group":"C", "logo":"images\/teams\/offenders.jpg","name":"Offenders","points":"0","symbol":""}
+	,{"group":"C", "logo":"images\/teams\/shanks_striker.jpg","name":"Shanks Strikers","points":"0","symbol":""}
+	,{"group":"C", "logo":"images\/teams\/PMO_Blasters.png","name":"PMO Blasters","points":"0","symbol":""}
+	,{"group":"C", "logo":"images\/teams\/Volts.png","name":"Volts","points":"0","symbol":""}
+	,{"group":"D", "logo":"images\/teams\/ITIM_LEGENDS.jpg","name":"ITIM LEGENDS","points":"0","symbol":""}
+	,{"group":"D", "logo":"images\/teams\/CG_Titans.jpg","name":"CG Titans","points":"0","symbol":""}
+	,{"group":"D", "logo":"images\/teams\/servicenowGladiators.jpg","name":"Servicenow Gladiators","points":"0","symbol":""}
+	,{"group":"D", "logo":"images\/teams\/Kattappas_Cadets.png","name":"Kattappas Cadets","points":"0","symbol":""}
+	,{"group":"E", "logo":"images\/teams\/Titans.jpg","name":"Titans","points":"0","symbol":""}
+	,{"group":"E", "logo":"images\/teams\/CRICK_IT.jpg","name":"Crick IT","points":"0","symbol":""}
+	,{"group":"E", "logo":"images\/teams\/DEADPOOL.jpg","name":"Deadpool","points":"0","symbol":""}
+	,{"group":"E", "logo":"images\/teams\/Bull_Fighters.jpg","name":"Bull Fighters","points":"0","symbol":""}
+]

@@ -1,7 +1,9 @@
 <dom-module id="ccl-teams">
 
+	<link rel="stylesheet" href="../../styles/style.css">
 	<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 
+<!--
 	<template>
 		
 		<div id="teams-container">
@@ -30,12 +32,43 @@
 		</div>
 
 	</template>
+-->
+
+	<template>
+
+	<iron-ajax auto url="../../model/teams.php?group={{group}}" handle-as="json" last-response="{{ teams }}"></iron-ajax>
+
+	<div id="content" role="main">
+    <div class="row">
+    	<span align="center"><h1>Group {{group}}</h1></span>
+        <ul class="team-landing-list small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+
+
+        	<template is="dom-repeat" items="{{ teams }}" as="team">
+                <li>
+                    <span class="tLogo100x"><img src="{{ team.logo }}"></span>
+                    <strong>{{ team.name }}</strong>
+                    <a class="button" href="/team/{{ team.team_id }}">View Team</a>
+                </li>
+            </template>
+              
+        </ul>
+    </div>
+	</div>
+
+	</template>
+
 </dom-module>
 
 <script>
 Polymer({
-	is: "ccl-teams"
-
+	is: "ccl-teams",
+	properties: {
+		group: {
+			type: String,
+			value: "A"
+		}
+	}
 });
 
 </script>

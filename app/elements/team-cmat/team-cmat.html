@@ -1,0 +1,47 @@
+<dom-module id="team-cmat">
+
+	<link rel="stylesheet" href="../../styles/style.css">
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+		
+	<template>
+
+	<iron-ajax auto url="../../model/teamCMAT.json" handle-as="json" last-response="{{ teamMembers }}"></iron-ajax>
+
+	<div id="cmat" role="main">
+    <div class="row">
+    	
+    	
+        <ul class="team-landing-list small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+        	<template is="dom-repeat" items="{{ teamMembers }}" as="teamMember">
+                <li>
+                	
+                      <span class="ts-circle ts-white-border ">
+                            <img width="160" alt="Profile Picture" srcset="{{teamMember.photo}}">
+                      </span>
+                      <div class="tshowcase-box-details">
+                              <div class="tshowcase-single-position">{{teamMember.name}}</div>
+                              <div class="tshowcase-single-email"><a href="mailto:{{teamMember.email}}">
+                              {{teamMember.email}}</a></div>
+                      </div>
+                    
+                  </li>
+            </template>
+              
+        </ul>
+        
+    </div>
+	</div>
+
+	</template>
+
+</dom-module>
+
+<script>
+Polymer({
+	is: "team-cmat"
+	
+});
+
+</script>
