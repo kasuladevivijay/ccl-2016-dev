@@ -57,6 +57,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 
+  <link rel="import" href="bower_components/paper-card/paper-card.html">
+
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
 <!--
@@ -162,11 +164,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="home" tabindex="-1">
               <paper-material elevation="1">
                 <div align="center">
-                  <img src="images/ccl_logo.jpg">
+                  <img src="images/ccl_logo.jpg" style="width:400px; height=400px;">
                 </div>
                 
               </paper-material>
 
+              <!--
               <paper-material elevation="1">
            
                 
@@ -186,7 +189,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     }
                 </style>
 
-
+            
+              <template is="dom-bind">
                 <paper-tabs selected="{{selected}}">
                   <paper-tab>Today's Matches</paper-tab>
                   <paper-tab>Day's Summary</paper-tab>
@@ -200,6 +204,63 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <div>Standings</div>
                   <div><ccl-teams></ccl-teams></div>
                 </iron-pages>
+              </template>
+              -->
+
+             
+                <paper-material>
+                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+                  <li>          
+                    <paper-card heading="Today's Matches" image="http://placehold.it/350x150/FFC107/000000" >
+                      <div class="card-content">
+                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+
+                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+
+                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                      </div>
+                      <div class="card-actions">
+                        <paper-button>Share</paper-button>
+                        <paper-button>Explore!</paper-button>
+                      </div>
+                    </paper-card>
+                  </li>
+                  <li>          
+                    <paper-card heading="Day's summary" image="http://placehold.it/350x150/FFC107/000000">
+                      <div class="card-content">
+                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                      </div>
+                      <div class="card-actions">
+                        <paper-button>Share</paper-button>
+                        <paper-button>Explore!</paper-button>
+                      </div>
+                    </paper-card>
+                  </li>
+
+                  <li>          
+                    <paper-card heading="Standings" image="http://placehold.it/350x150/FFC107/000000">
+                      <div class="card-content">
+                        <ccl-teams></ccl-teams>
+                      </div>
+                      <div class="card-actions">
+                        <paper-button>Share</paper-button>
+                        <paper-button>Explore!</paper-button>
+                      </div>
+                    </paper-card>
+                  </li>
+                  <li>          
+                    <paper-card heading="CCL Updates" image="http://placehold.it/350x150/FFC107/000000">
+                      <div class="card-content">
+                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                      </div>
+                      <div class="card-actions">
+                        <paper-button>Share</paper-button>
+                        <paper-button>Explore!</paper-button>
+                      </div>
+                    </paper-card>
+                  </li>
+                </ul>
+                </paper-material>
 
             </section>
 
@@ -243,9 +304,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="team-info" tabindex="-1">
               <paper-material elevation="-1">
-                <h1 class="page-title" tabindex="-1">User: {{params.team-id}}</h1>
-                <div>This is {{params.team-id}}'s section</div>
-              </paper-material>
+                <ccl-team teamid="{{params.teamid}}"></ccl-team>
+            </paper-material>
             </section>
 
 
@@ -262,8 +322,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="user-info" tabindex="-1">
               <paper-material elevation="-1">
-                <h1 class="page-title" tabindex="-1">User: {{params.name}}</h1>
-                <div>This is {{params.name}}'s section</div>
+             <!--   <h1 class="page-title" tabindex="-1">User: {{params.name}}</h1>
+                <div>This is {{params.name}}'s section</div> -->
+                Test
               </paper-material>
             </section>
 
@@ -310,6 +371,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
+
+<!--
+  <script type="text/javascript">
+    
+    document.addEventListener('WebComponentsReady', function () {
+    var template = document.querySelector('template[is="dom-bind"]');
+    template.selected = 0; // selected is an index by default
+  });
+  </script>
+
+-->
+
   <!-- endbuild-->
 </body>
 

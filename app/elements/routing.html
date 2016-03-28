@@ -56,10 +56,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       setFocus(app.route);
     });
 
-    page('/teams/:team-id', function(data) {
+    page('/team/:teamid', function(data) {
+      console.log('Called...');
       app.route = 'team-info';
       app.params = data.params;
+      console.log("Here..");
       setFocus(app.route);
+      
     });
 
     page('/fixtures', function() {

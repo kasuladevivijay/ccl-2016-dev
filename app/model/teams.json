@@ -1,8 +1,8 @@
 [
-	{"group":"A","logo":"images\/teams\/Aces.jpg","name":"Aces","points":"0","symbol":""}
-	,{"group":"A", "logo":"images\/teams\/Box_Busters.jpg","name":"Box Busters","points":"0","symbol":""}
-	,{"group":"A", "logo":"images\/teams\/Cunning_Rascals.jpg","name":"Cunning Rascals","points":"0","symbol":""}
-	,{"group":"A", "logo":"images\/teams\/Swarajya.png","name":"Swarajya","points":"0","symbol":""}
+	{"group":"A","logo":"images\/teams\/Aces.jpg","name":"Aces","points":"0","symbol":"","team_id":"1"}
+	,{"group":"A", "logo":"images\/teams\/Box_Busters.jpg","name":"Box Busters","points":"0","symbol":"","team_id":"2"}
+	,{"group":"A", "logo":"images\/teams\/Cunning_Rascals.jpg","name":"Cunning Rascals","points":"0","symbol":"","team_id":"3"}
+	,{"group":"A", "logo":"images\/teams\/Swarajya.png","name":"Swarajya","points":"0","symbol":"","team_id":"4"}
 	,{"group":"B", "logo":"images\/teams\/Dabangg.jpg","name":"Dabangg","points":"0","symbol":""}
 	,{"group":"B", "logo":"images\/teams\/dementor.jpg","name":"Dementor","points":"0","symbol":""}
 	,{"group":"B", "logo":"images\/teams\/Avengers.png","name":"Avengers","points":"0","symbol":""}

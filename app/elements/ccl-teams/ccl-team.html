@@ -1,9 +1,14 @@
 <dom-module id="ccl-team">
+
+	<link rel="stylesheet" href="../../styles/style.css">
+	<link rel="stylesheet" href="../../styles/global.css">
+<link rel="stylesheet" href="../../styles/team-profile.css">
 	
 	<template>
-		
+	<iron-ajax auto url="../../model/players.php?teamid={{teamid}}" handle-as="json" last-response="{{ players }}"></iron-ajax>
+	
 		<!--<div id="teams-container">
-			<ul  class="nav nav-tabs" >-->
+			<ul  class="nav nav-tabs" >--
 			<tr>
 				<td>Offenders</td>
 				<td>B</td>
@@ -12,12 +17,39 @@
 			</tr>
 		</div>
 
+		-->
+<div class="unitContent">
+ <div class="playerCardSquad">
+ 	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+
+ 		<template is="dom-repeat" items="{{ players }}" as="player">
+ 		<li>
+ 			<a player-id="{{player.id}}">
+ 				<div class="loadOverlay" style="display: none;">
+ 					<div class="loadOverlayContent">
+ 					<div class="loadAnimate"></div>
+ 					</div>
+ 				</div>
+ 				<img src="{{player.photo}}">
+ 					<span><i>{{player.firstname}}</i>{{player.lastname}}</span>
+ 			</a>
+ 			<div class="split">split</div>
+ 		</li>
+ 		</template>
+ 	</ul>
+ </div>
+</div>
 	</template>
 </dom-module>
 
 <script>
 Polymer({
-	is: "ccl-team"
+	is: "ccl-team",
+	properties: {
+		teamid: {
+			type: String
+		}
+	}
 
 });
 
