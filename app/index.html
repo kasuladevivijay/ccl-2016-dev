@@ -164,7 +164,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="home" tabindex="-1">
               <paper-material elevation="1">
                 <div align="center">
-                  <img src="images/ccl_logo.jpg" style="width:400px; height=400px;">
+                  <img src="images/ccl_logo.jpg">
                 </div>
                 
               </paper-material>
@@ -209,59 +209,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
              
                 <paper-material>
+                  <style is="custom-style" >
+                      paper-card{
+                        min-width: 33vw;
+
+                        --paper-card: {
+                             background-color: transparent;
+                         };
+
+                        --paper-card-header-color: white;
+                         
+                        --paper-card-header: {
+                             background-color: purple;
+                         }
+
+                        --paper-card-content: {
+                             background-color: rgba(255, 255, 255, 0.5);
+                         };
+                    }
+                  </style>
+
                 <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-                  <li>          
-                    <paper-card heading="Today's Matches" image="http://placehold.it/350x150/FFC107/000000" >
-                      <div class="card-content">
-                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-
-                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-
-                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-                      </div>
-                      <div class="card-actions">
-                        <paper-button>Share</paper-button>
-                        <paper-button>Explore!</paper-button>
-                      </div>
-                    </paper-card>
-                  </li>
-                  <li>          
-                    <paper-card heading="Day's summary" image="http://placehold.it/350x150/FFC107/000000">
-                      <div class="card-content">
-                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-                      </div>
-                      <div class="card-actions">
-                        <paper-button>Share</paper-button>
-                        <paper-button>Explore!</paper-button>
-                      </div>
-                    </paper-card>
-                  </li>
-
-                  <li>          
-                    <paper-card heading="Standings" image="http://placehold.it/350x150/FFC107/000000">
-                      <div class="card-content">
-                        <ccl-teams></ccl-teams>
-                      </div>
-                      <div class="card-actions">
-                        <paper-button>Share</paper-button>
-                        <paper-button>Explore!</paper-button>
-                      </div>
-                    </paper-card>
-                  </li>
-                  <li>          
-                    <paper-card heading="CCL Updates" image="http://placehold.it/350x150/FFC107/000000">
-                      <div class="card-content">
-                        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-                      </div>
-                      <div class="card-actions">
-                        <paper-button>Share</paper-button>
-                        <paper-button>Explore!</paper-button>
-                      </div>
-                    </paper-card>
-                  </li>
-                </ul>
+                <li>
+                  <paper-card heading="Todays Matches">
+                    <div class="card-content">
+                       <ccl-fixtures fetch="todays"></ccl-fixtures>
+                    </div>
+                    
+                  </paper-card>
+                </li>
+                <li>
+                 <paper-card heading="Yesterday's Summary">
+                    <div class="card-content">
+                       <ccl-fixtures fetch="todays"></ccl-fixtures>
+                    </div>
+                    
+                  </paper-card>
+                </li>
                 </paper-material>
+                
 
+                <!--
+                <paper-material elevation="1">
+                  <ccl-fixtures fetch="todays"></ccl-fixtures>
+                </paper-material> -->
             </section>
 
             <section data-route="teams" tabindex="-1">

@@ -7,7 +7,7 @@
 		
 	<template>
 
-	<iron-ajax auto url="../../model/fixtures.php" handle-as="json" last-response="{{ matches }}"></iron-ajax>
+	<iron-ajax auto url="../../model/fixtures.php?fetch={{ fetch }}" handle-as="json" last-response="{{ matches }}"></iron-ajax>
 
   <!--
 	<div id="cmat" role="main">
@@ -91,7 +91,13 @@
 
 <script>
 Polymer({
-	is: "ccl-fixtures"
+	is: "ccl-fixtures",
+  properties: {
+    fetch: {
+      type: String,
+      value: "all"
+    }
+  }
 	
 });
 
