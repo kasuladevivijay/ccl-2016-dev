@@ -32,7 +32,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="PSK">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+ <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -94,6 +94,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Home</span>
           </a>
 
+           <a data-route="rules" href="{{baseUrl}}rules">
+            <iron-icon icon="info"></iron-icon>
+            <span>Rules</span>
+          </a>
+
           <!--data route for teams -->
             <a data-route="teams" href="{{baseUrl}}teams">
               <iron-icon icon="face"></iron-icon>
@@ -112,27 +117,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <span>Gallery</span>
             </a>
 
-          <!--data route for blog -->
+          <!--data route for blog 
             <a data-route="blog" href="{{baseUrl}}blog">
               <iron-icon icon="send"></iron-icon>
               <span>Blog</span>
             </a>
 
+            -->
+
           <!--data route for Team CMAT -->
             <a data-route="about" href="{{baseUrl}}teamCMAT">
-              <iron-icon icon="info"></iron-icon>
-              <span>Team CMAT</span>
+              <iron-icon icon="mail"></iron-icon>
+              <span>Contact</span>
             </a>
 
          
-          <!--data route for contact -->
+          <!--data route for contact 
           <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
-		  
-		  
+		      -->
+		    
+         
         </paper-menu>
+
+
+
+
       </paper-scroll-header-panel>
 
       <!-- Main Area -->
@@ -144,8 +156,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="space"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
+         <!-- <paper-icon-button icon="refresh"></paper-icon-button>
+          <paper-icon-button icon="search"></paper-icon-button> -->
 
           <!-- Application name -->
           <div class="middle middle-container">
@@ -163,6 +175,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home" tabindex="-1">
               <paper-material elevation="1">
+              <h1 class="page-title" tabindex="-1"></h1>
                 <div align="center">
                   <img src="images/ccl_logo.jpg">
                 </div>
@@ -213,6 +226,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       paper-card{
                         min-width: 33vw;
 
+                        @apply(--paper-font-headline);
+
                         --paper-card: {
                              background-color: transparent;
                          };
@@ -227,17 +242,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                              background-color: rgba(255, 255, 255, 0.5);
                          };
                     }
+
                   </style>
 
-                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+                <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
                 <li>
                   <paper-card heading="Todays Matches">
-                    <div class="card-content">
+                    <div class="card-content">                      
                        <ccl-fixtures fetch="todays"></ccl-fixtures>
                     </div>
                     
                   </paper-card>
                 </li>
+                <!--
                 <li>
                  <paper-card heading="Yesterday's Summary">
                     <div class="card-content">
@@ -246,6 +263,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     
                   </paper-card>
                 </li>
+                -->
                 </paper-material>
                 
 
@@ -255,8 +273,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </paper-material> -->
             </section>
 
+             <section data-route="rules" tabindex="-1">
+              <paper-material elevation="1">
+                 <h1 class="page-title" tabindex="-1"></h1>
+                  <ccl-rules></ccl-rules>
+              </paper-material>
+              </section>
+
             <section data-route="teams" tabindex="-1">
               <paper-material elevation="1">
+                 <h1 class="page-title" tabindex="-1"></h1>
                <!--<h1 class="page-title" tabindex="-1">Teams</h1>-->
                 
                 <ccl-teams group="A"></ccl-teams>
@@ -267,25 +293,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="team" tabindex="-1">
-              <paper-material elevation="1">
-
             
-
-              </paper-material>
-            </section>
-
             <section data-route="fixtures" tabindex="-1">
               <paper-material elevation="1">
-
+                 <h1 class="page-title" tabindex="-1">Schedule</h1>
                 <ccl-fixtures></ccl-fixtures>
 
               </paper-material>
             </section>
 
+            <section data-route="gallery" tabindex="-1">
+              <paper-material elevation="1">
+                 <h1 class="page-title" tabindex="-1">Gallery</h1>
+                <ccl-gallery></ccl-gallery>
+
+              </paper-material>
+            </section>
+
+
 
             <section data-route="teamCMAT" tabindex="-1">
               <paper-material elevation="1">
+               <h1 class="page-title" tabindex="-1"></h1>
                   <team-cmat></team-cmat>
               </paper-material>
             </section>
@@ -295,7 +324,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="team-info" tabindex="-1">
               <paper-material elevation="-1">
-                <ccl-team teamid="{{params.teamid}}"></ccl-team>
+                 <h1 class="page-title" tabindex="-1"></h1>
+                <ccl-team teamid="{{params.teamid}}" teamname="{{ params.teamname }}"></ccl-team>
             </paper-material>
             </section>
 

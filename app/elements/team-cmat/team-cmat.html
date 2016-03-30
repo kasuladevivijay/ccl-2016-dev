@@ -15,18 +15,19 @@
     	
         <ul class="team-landing-list small-block-grid-1 medium-block-grid-2 large-block-grid-2">
         	<template is="dom-repeat" items="{{ teamMembers }}" as="teamMember">
+
+
                 <li>
                 	
-                      <span class="ts-circle ts-white-border ">
-                            <img width="160" alt="Profile Picture" srcset="{{teamMember.photo}}">
-                      </span>
-                      <div class="tshowcase-box-details">
-                              <div class="tshowcase-single-position">{{teamMember.name}}</div>
-                              <div class="tshowcase-single-email"><a href="mailto:{{teamMember.email}}">
-                              {{teamMember.email}}</a></div>
-                      </div>
+	                  <span class="ts-circle ts-white-border ">
+	                        <img width="160" alt="Profile Picture" srcset="{{teamMember.photo}}">
+	                  </span>
+	                  <div class="tshowcase-box-details">
+	                          <div class="tshowcase-single-position"><a href="mailto:{{teamMember.email}}">{{teamMember.name}}</a></div>
+	                          
+	                  </div>
                     
-                  </li>
+                </li>
             </template>
               
         </ul>

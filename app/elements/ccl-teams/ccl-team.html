@@ -20,6 +20,7 @@
 		-->
 <div class="unitContent">
  <div class="playerCardSquad">
+ 	<span align="left"><h1>Team : {{ teamname }}</h1></span>
  	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
  		<template is="dom-repeat" items="{{ players }}" as="player">
@@ -47,6 +48,9 @@ Polymer({
 	is: "ccl-team",
 	properties: {
 		teamid: {
+			type: String
+		},
+		teamname: {
 			type: String
 		}
 	}

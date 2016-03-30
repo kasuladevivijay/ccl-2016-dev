@@ -1,10 +1,12 @@
 [
-	 {"name":"Rajvinder Salariya","email":"rajvinder.salariya@igate.com", "photo":"images/teamCMAT/raj.jpg"}
+	{"name":"CMAT","email":"cmat@igate.com", "photo":"images/teamCMAT/cmat.jpg"}
+	,{"name":"Rajvinder Salariya","email":"rajvinder.salariya@igate.com", "photo":"images/teamCMAT/raj.jpg"}
 	,{"name":"Anmol Velling","email":"anmol.velling@igate.com", "photo":"images/teamCMAT/anmol.jpg"}
 	,{"name":"Siddhesh Baraskar","email":"siddhesh.baraskar@igate.com", "photo":"images/teamCMAT/siddhesh.jpg"}
+	,{"name":"Akshay Bhadoria","email":"akshay.bhadoria@igate.com", "photo":"images/teamCMAT/akshay.jpg"}
 	,{"name":"Jitendra Patil","email":"jitendra.dpatil@igate.com", "photo":"images/teamCMAT/jitendra.jpg"}
-	,{"name":"Manikandan Solaimuthu","email":"manikandan.solaimuthu@igate.com", "photo":"images/teamCMAT/mani.jpg"}
 	,{"name":"Pooja Shetty","email":"pooja.shetty@igate.com", "photo":"images/teamCMAT/pooja.jpg"}
 	,{"name":"Nithya Govindaraj","email":"nithya.govindaraj@igate.com", "photo":"images/teamCMAT/nithya.jpg"}
+	,{"name":"Manikandan Solaimuthu","email":"manikandan.solaimuthu@igate.com", "photo":"images/teamCMAT/mani.jpg"}
 	,{"name":"Sharvari Chavan","email":"sharvari.chavan@igate.com", "photo":"images/teamCMAT/sharvari.jpg"}
 ]
