@@ -117,7 +117,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <span>Gallery</span>
             </a>
 
-          <!--data route for blog 
+          <!--data route for blog
             <a data-route="blog" href="{{baseUrl}}blog">
               <iron-icon icon="send"></iron-icon>
               <span>Blog</span>
@@ -131,15 +131,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <span>Contact</span>
             </a>
 
-         
-          <!--data route for contact 
+
+          <!--data route for contact
           <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
 		      -->
-		    
-         
+		    <span class="space"></span>
+        <hr>
+        <blockquote>
+          <p>
+            <strong>built by ecomm team</strong>
+          </p>
+        </blockquote>
+
         </paper-menu>
 
 
@@ -179,13 +185,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <div align="center">
                   <img src="images/ccl_logo.jpg">
                 </div>
-                
+
               </paper-material>
 
               <!--
               <paper-material elevation="1">
-           
-                
+
+
                    <style is="custom-style">
                     :root {
                         --my-custom-color: blue;
@@ -202,7 +208,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     }
                 </style>
 
-            
+
               <template is="dom-bind">
                 <paper-tabs selected="{{selected}}">
                   <paper-tab>Today's Matches</paper-tab>
@@ -220,7 +226,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </template>
               -->
 
-             
+
                 <paper-material>
                   <style is="custom-style" >
                       paper-card{
@@ -233,7 +239,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                          };
 
                         --paper-card-header-color: white;
-                         
+
                         --paper-card-header: {
                              background-color: purple;
                          }
@@ -248,10 +254,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
                 <li>
                   <paper-card heading="Todays Matches">
-                    <div class="card-content">                      
+                    <div class="card-content">
                        <ccl-fixtures fetch="todays"></ccl-fixtures>
                     </div>
-                    
+
                   </paper-card>
                 </li>
                 <!--
@@ -260,12 +266,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <div class="card-content">
                        <ccl-fixtures fetch="todays"></ccl-fixtures>
                     </div>
-                    
+
                   </paper-card>
                 </li>
                 -->
                 </paper-material>
-                
+
 
                 <!--
                 <paper-material elevation="1">
@@ -284,7 +290,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                  <h1 class="page-title" tabindex="-1"></h1>
                <!--<h1 class="page-title" tabindex="-1">Teams</h1>-->
-                
+
                 <ccl-teams group="A"></ccl-teams>
                 <ccl-teams group="B"></ccl-teams>
                 <ccl-teams group="C"></ccl-teams>
@@ -293,7 +299,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            
+
             <section data-route="fixtures" tabindex="-1">
               <paper-material elevation="1">
                  <h1 class="page-title" tabindex="-1">Schedule</h1>
@@ -318,7 +324,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <team-cmat></team-cmat>
               </paper-material>
             </section>
-        
+
 
 
 
@@ -355,7 +361,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p>This is the contact section</p>
               </paper-material>
             </section>
-			
+
 			<section data-route="books">
 			  <paper-material elevation="1">
 				<p>Hello, World!</p>
@@ -386,7 +392,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                          cache-config-file="cache-config.json">
       </platinum-sw-cache>
     </platinum-sw-register>
-    -->  
+    -->
 
   </template>
 
@@ -395,7 +401,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!--
   <script type="text/javascript">
-    
+
     document.addEventListener('WebComponentsReady', function () {
     var template = document.querySelector('template[is="dom-bind"]');
     template.selected = 0; // selected is an index by default
